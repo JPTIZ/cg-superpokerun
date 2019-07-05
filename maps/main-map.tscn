@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/models/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/models/pikachu.tscn" type="PackedScene" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5.22954, 0, 0, 0, 1, 0, 0, 0, 11.9032, 0.66742, 0.00481319, -1.04474 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.693015, 0.588546, -0.416346, 0.318277, 0.268412, 0.909206, 0.646861, -0.762607, -0.00130714, -20.7524, 37.9361, -10.8599 )
+shadow_enabled = true
+
+[node name="Pikachu" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="Pikachu"]
+transform = Transform( -0.999978, -2.32827e-10, -0.00669324, -0.00282869, 0.906308, 0.422609, 0.00606614, 0.422618, -0.906288, 1.13687e-13, 10.9556, -13.4435 )

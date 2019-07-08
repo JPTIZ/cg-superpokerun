@@ -10,12 +10,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
     time += PI / 60
-    print('ellapsed {delta} (total: {time}, sin: {sin})'.format(
-        {'delta': delta,
-         'time': time,
-         'sin': sin(time),
-        }
-    ))
 
     rotate_y(deg2rad(45 * delta))
     translate(Vector3(0, sin(time) * delta, 0))
+
+func _on_Item1_body_entered(body: Node) -> void:
+    if body is KinematicBody:
+        queue_free()

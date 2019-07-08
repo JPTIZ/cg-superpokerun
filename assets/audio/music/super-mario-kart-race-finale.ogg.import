@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/super-mario-kart-race-finale.ogg-818330538ead0e98a47ce2d515946e53.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/music/super-mario-kart-race-finale.ogg"
+dest_files=[ "res://.import/super-mario-kart-race-finale.ogg-818330538ead0e98a47ce2d515946e53.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

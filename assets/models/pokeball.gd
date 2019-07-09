@@ -7,6 +7,7 @@ var time = 0
 func _ready() -> void:
     pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
     time += PI / 60
@@ -14,6 +15,13 @@ func _process(delta: float) -> void:
     rotate_y(deg2rad(45 * delta))
     translate(Vector3(0, sin(time) * delta, 0))
 
+
 func _on_Item1_body_entered(body: Node) -> void:
     if body is KinematicBody:
-        queue_free()
+        if not $GotchaSound.playing:
+            $GotchaSound.stream = load('res://assets/audio/sound/Item1.wav')
+            $GotchaSound.play()
+        visible = false
+
+func _on_GotchaSound_finished() -> void:
+    queue_free()

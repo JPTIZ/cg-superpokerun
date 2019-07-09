@@ -16,7 +16,7 @@ margin_right = 1024.0
 margin_bottom = 610.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="content" type="Label" parent="."]
+[node name="main-alert" type="Label" parent="."]
 margin_left = 390.0
 margin_top = 240.0
 margin_right = 659.0

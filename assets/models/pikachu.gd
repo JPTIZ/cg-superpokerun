@@ -7,6 +7,7 @@ const gravity = -9.8
 var dir = Vector3(0, 0, 0)
 var velocity = Vector3()
 var enabled = true
+var dead = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,6 +18,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+    if global_transform.origin.y < -10:
+        dead = true
+        enabled = false
+
+    if dead:
+        return
+
     dir = Vector3()
 
     if enabled:

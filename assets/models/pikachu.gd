@@ -32,6 +32,13 @@ func _physics_process(delta):
 
     dir = dir.normalized() * speed * delta
 
+    if dir == Vector3():
+        $AnimationPlayer.set_current_animation('Idle')
+        $AnimationPlayer.play()
+    else:
+        $AnimationPlayer.set_current_animation('andando')
+        $AnimationPlayer.play()
+
     var _gravity = gravity * speed / 100
 
     velocity.y += _gravity * delta

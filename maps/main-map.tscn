@@ -58,7 +58,7 @@ transform = Transform( 0.693015, 0.588546, -0.416346, 0.318277, 0.268412, 0.9092
 shadow_enabled = true
 
 [node name="Pikachu" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -86.5445, 96.0146 )
+transform = Transform( 0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0, -86.5445, 96.0146 )
 
 [node name="Camera" type="Camera" parent="Pikachu"]
 transform = Transform( -0.999978, -2.32827e-10, -0.00669324, -0.00282869, 0.906308, 0.422609, 0.00606614, 0.422618, -0.906288, 1.13687e-13, 10.9556, -13.4435 )
